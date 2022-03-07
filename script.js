@@ -51,12 +51,25 @@ const arrMembers = [
 const eleContainer = document.getElementsByClassName(`team-container`);
 const eleCard = document.createElement(`div`);
 eleCard.className = `team-card`;
-eleContainer.append(eleCard);
+eleContainer[0].append(eleCard);
 
+// stampo la card-image
+const eleCardImage = document.createElement(`div`);
+eleCardImage.className = `card-image`;
+eleCard.append(eleCardImage);
+
+const eleMemberImage = document.createElement(`img`);
+eleMemberImage.src = "img/wayne-barnett-founder-ceo.jpg";
+eleCardImage.append(eleMemberImage);
+
+// stampo la card-text
+const eleCardText = document.createElement(`div`);
+eleCardText.className = `card-text`;
+eleCard.append(eleCardText);
 
 
 // FUNCTIONS
-// function createAndAppendElement(newElement, container) {
-//     const newElement = document.createElement(`div`);
-//     container.append(newElement);
+// function createAndAppendElement() {
+//     let newElement = document.createElement(`div`);
+//     container[0].append(newElement);
 // }
