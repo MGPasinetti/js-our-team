@@ -59,13 +59,23 @@ eleCardImage.className = `card-image`;
 eleCard.append(eleCardImage);
 
 const eleMemberImage = document.createElement(`img`);
-eleMemberImage.src = "img/wayne-barnett-founder-ceo.jpg";
+eleMemberImage.src = arrMembers[0].foto;
 eleCardImage.append(eleMemberImage);
 
 // stampo la card-text
 const eleCardText = document.createElement(`div`);
 eleCardText.className = `card-text`;
 eleCard.append(eleCardText);
+
+const eleMemberName = document.createElement(`h3`);
+eleMemberName.innerHTML = arrMembers[0].nome;
+eleCardText.append(eleMemberName);
+
+const eleMemberRole = document.createElement(`p`);
+eleMemberRole.innerHTML = arrMembers[0].ruolo;
+eleCardText.append(eleMemberRole);
+
+
 
 
 // FUNCTIONS
