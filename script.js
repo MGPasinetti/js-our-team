@@ -11,8 +11,6 @@ console.log() è nostro amico.
 Quando un pezzo di codice funziona, chiediamoci se possiamo scomporlo in funzioni più piccole.
 */
 
-// STEPS:
-
 // definisco un array di oggetti che rappresentano i membri del team (con Nome, Ruolo, Foto)
 const arrMembers = [
     {
@@ -49,6 +47,9 @@ const arrMembers = [
 
 // stampo dinamicamente una card per ogni membro del team
 const eleContainer = document.getElementsByClassName(`team-container`);
+const eleInputName = document.getElementById(`name`);
+const eleInputRole = document.getElementById(`role`);
+const btnAddMember = document.getElementById(`addMemberButton`);
 
 for (let index = 0; index <= arrMembers.length; index++) {
     const eleCard = document.createElement(`div`);
@@ -76,31 +77,15 @@ for (let index = 0; index <= arrMembers.length; index++) {
     const eleMemberRole = document.createElement(`p`);
     eleMemberRole.innerHTML = arrMembers[index].ruolo;
     eleCardText.append(eleMemberRole);    
-    
 }
 
+// stampo una card in base alle info del form "add-member"
+var newMemberObj = {};
+
+eleInputName.value
+
+arrMembers.push(newMemberObj);
 
 
-// creo una funzione che si reiteri con i dati giusti per ogni card
 
-
-
-
-
-// FUNCTIONS
-// function createAndAppendElement(container) {
-//     let newElement = document.createElement(`div`);
-//     container[0].append(newElement);
-
-//     return newElement;
-// }
-
-// function addDatasToCard() {
-//     if (arrCards[index] === arrMembers.length) {
-//         eleMemberImage.src = arrMembers.length.foto;
-//         eleMemberName.innerHTML = arrMembers.length.nome;
-//         eleMemberRole.innerHTML = arrMembers.length.ruolo;
-//     }
-
-//     return eleCard;
-// }
+// https://picsum.photos/400/429/
