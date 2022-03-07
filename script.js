@@ -49,31 +49,35 @@ const arrMembers = [
 
 // stampo dinamicamente una card per ogni membro del team
 const eleContainer = document.getElementsByClassName(`team-container`);
-const eleCard = document.createElement(`div`);
-eleCard.className = `team-card`;
-eleContainer[0].append(eleCard);
 
-// stampo la card-image
-const eleCardImage = document.createElement(`div`);
-eleCardImage.className = `card-image`;
-eleCard.append(eleCardImage);
+for (let index = 1; index <= 6; index++) {
+    const eleCard = document.createElement(`div`);
+    eleCard.className = `team-card`;
+    eleContainer[0].append(eleCard);
 
-const eleMemberImage = document.createElement(`img`);
-eleMemberImage.src = arrMembers[0].foto;
-eleCardImage.append(eleMemberImage);
+    // stampo la card-image
+    const eleCardImage = document.createElement(`div`);
+    eleCardImage.className = `card-image`;
+    eleCard.append(eleCardImage);
 
-// stampo la card-text
-const eleCardText = document.createElement(`div`);
-eleCardText.className = `card-text`;
-eleCard.append(eleCardText);
+    const eleMemberImage = document.createElement(`img`);
+    eleMemberImage.src = arrMembers[0].foto;
+    eleCardImage.append(eleMemberImage);
 
-const eleMemberName = document.createElement(`h3`);
-eleMemberName.innerHTML = arrMembers[0].nome;
-eleCardText.append(eleMemberName);
+    // stampo la card-text
+    const eleCardText = document.createElement(`div`);
+    eleCardText.className = `card-text`;
+    eleCard.append(eleCardText);
 
-const eleMemberRole = document.createElement(`p`);
-eleMemberRole.innerHTML = arrMembers[0].ruolo;
-eleCardText.append(eleMemberRole);
+    const eleMemberName = document.createElement(`h3`);
+    eleMemberName.innerHTML = arrMembers[0].nome;
+    eleCardText.append(eleMemberName);
+
+    const eleMemberRole = document.createElement(`p`);
+    eleMemberRole.innerHTML = arrMembers[0].ruolo;
+    eleCardText.append(eleMemberRole);
+}
+
 
 
 
