@@ -48,7 +48,15 @@ const arrMembers = [
 ];
 
 // stampo dinamicamente una card per ogni membro del team
-const eleContainer = document.getElementsByClassName(`.team-container`);
+const eleContainer = document.getElementsByClassName(`team-container`);
 const eleCard = document.createElement(`div`);
-eleCard.className(`.team-card`);
+eleCard.className = `team-card`;
 eleContainer.append(eleCard);
+
+
+
+// FUNCTIONS
+// function createAndAppendElement(newElement, container) {
+//     const newElement = document.createElement(`div`);
+//     container.append(newElement);
+// }
