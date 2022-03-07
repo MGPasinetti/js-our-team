@@ -50,7 +50,7 @@ const arrMembers = [
 // stampo dinamicamente una card per ogni membro del team
 const eleContainer = document.getElementsByClassName(`team-container`);
 
-for (let index = 1; index <= 6; index++) {
+for (let index = 0; index <= arrMembers.length; index++) {
     const eleCard = document.createElement(`div`);
     eleCard.className = `team-card`;
     eleContainer[0].append(eleCard);
@@ -61,7 +61,7 @@ for (let index = 1; index <= 6; index++) {
     eleCard.append(eleCardImage);
 
     const eleMemberImage = document.createElement(`img`);
-    eleMemberImage.src = arrMembers[0].foto;
+    eleMemberImage.src = arrMembers[index].foto;
     eleCardImage.append(eleMemberImage);
 
     // stampo la card-text
@@ -70,20 +70,37 @@ for (let index = 1; index <= 6; index++) {
     eleCard.append(eleCardText);
 
     const eleMemberName = document.createElement(`h3`);
-    eleMemberName.innerHTML = arrMembers[0].nome;
+    eleMemberName.innerHTML = arrMembers[index].nome;
     eleCardText.append(eleMemberName);
 
     const eleMemberRole = document.createElement(`p`);
-    eleMemberRole.innerHTML = arrMembers[0].ruolo;
-    eleCardText.append(eleMemberRole);
+    eleMemberRole.innerHTML = arrMembers[index].ruolo;
+    eleCardText.append(eleMemberRole);    
+    
 }
+
+
+
+// creo una funzione che si reiteri con i dati giusti per ogni card
 
 
 
 
 
 // FUNCTIONS
-// function createAndAppendElement() {
+// function createAndAppendElement(container) {
 //     let newElement = document.createElement(`div`);
 //     container[0].append(newElement);
+
+//     return newElement;
+// }
+
+// function addDatasToCard() {
+//     if (arrCards[index] === arrMembers.length) {
+//         eleMemberImage.src = arrMembers.length.foto;
+//         eleMemberName.innerHTML = arrMembers.length.nome;
+//         eleMemberRole.innerHTML = arrMembers.length.ruolo;
+//     }
+
+//     return eleCard;
 // }
